@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # barfny-kalkulator
 Kalkulator diet BARF dla psów
-=======
+
 # Astro Starter Kit: Basics
 
 ```sh
@@ -48,4 +47,3 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
->>>>>>> 5ee3f8d (Initial commit from Astro)
