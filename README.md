@@ -1,14 +1,6 @@
 # barfny-kalkulator
 Kalkulator diet BARF dla psów
 
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
@@ -16,16 +8,22 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── dog-calculator-icon.svg
 ├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── assets
+│   │   ├── astro.svg
+│   │   └── background.svg
+│   ├── components
+│   │   ├── Counter.tsx
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   ├── pages
+│   │   └── index.astro
+│   └── styles
+│       └── global.css
+├── astro.config.mjs
+├── tailwind.config.mjs
 └── package.json
 ```
 
