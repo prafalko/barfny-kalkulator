@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { Image } from 'astro:assets';
-import banner from '../assets/banner.png';
+import doggo from '../assets/doggo.png';
 ---
 <!doctype html>
 <html lang="en">
@@ -13,8 +13,30 @@ import banner from '../assets/banner.png';
 		<title>Barfny kalkulator</title>
 	</head>
 	<body>
-		<div class="banner-container">
-			<Image src={banner} alt="Barfny kalkulator - welcome banner" loading="eager" fetchpriority="high" sizes="100vw" />
+		<!-- Header Section with Doggo and Title -->
+		<div class="header-container">
+			<div class="header-content">
+				<div class="doggo-container">
+					<Image src={doggo} alt="Happy puppy with calculator" loading="eager" fetchpriority="high" />
+				</div>
+				<div class="title-container">
+					<h1 class="text-5xl md:text-6xl font-black tracking-tight leading-tight">
+						<span class="inline-block bg-gradient-to-r from-teal-400 via-emerald-400 to-green-500 bg-clip-text text-transparent">
+							Barfny Kalkulator
+						</span>
+						
+						<div class="relative mx-auto mb-4 mt-2 w-32">
+							<div class="absolute inset-0 flex items-center">
+								<div class="w-full h-1 bg-gradient-to-r from-teal-300 via-emerald-300 to-green-400 rounded-full shadow-lg"></div>
+							</div>
+						</div>
+						
+						<span class="block text-4xl md:text-5xl text-slate-600 mt-2">Twój kalkulator diety BARF dla psów</span>
+						
+						<div class="absolute inset-0 bg-gradient-to-r from-teal-50/40 via-emerald-50/40 to-green-50/40 rounded-2xl blur-xl -z-10 -translate-y-4"></div>
+					</h1>
+				</div>
+			</div>
 		</div>
 		<slot />
 	</body>
@@ -25,18 +47,57 @@ import banner from '../assets/banner.png';
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		min-height: 100vh;
+		background: linear-gradient(135deg, #a7f3d0 0%, #fde68a 50%, #f3e8ff 100%);
+		background-attachment: fixed;
 	}
 
-	.banner-container {
+	.header-container {
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		padding: 2rem 1rem;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(15px);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 	}
 
-	.banner-container img,
-	.banner-container picture {
-		max-width: 100%;
+	.header-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3rem;
+		max-width: 1200px;
+		width: 100%;
+	}
+
+	.doggo-container {
+		flex-shrink: 0;
+	}
+
+	.doggo-container img,
+	.doggo-container picture {
+		max-width: 300px;
 		height: auto;
 	}
+
+	.title-container {
+		flex: 1;
+		position: relative;
+		text-align: center;
+	}
+
+	@media (max-width: 768px) {
+		.header-content {
+			flex-direction: column;
+			text-align: center;
+			gap: 2rem;
+		}
+		
+		.doggo-container img,
+		.doggo-container picture {
+			max-width: 250px;
+		}
+	}
 </style>
+

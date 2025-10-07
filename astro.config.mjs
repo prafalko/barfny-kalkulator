@@ -13,5 +13,8 @@ export default defineConfig({
   integrations: [react()],
   server: {
     port: 3000
+  },
+  experimental: {
+    chromeDevtoolsWorkspace: true,
   }
 });
